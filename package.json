@@ -15,7 +15,7 @@
     "react": "^0.13.3",
     "react-intl": "^1.2.0",
     "react-tools": "^0.13.3",
-    "reactify": "^1.1.1",
+    "reactify": "^1.1.1",    
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.1"
   },

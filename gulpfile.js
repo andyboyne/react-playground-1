@@ -20,18 +20,20 @@ gulp.task('app', function() {
         packageCache: {},
         fullPaths: true
     });
+    
+    //bundler.plugin('minifyify', {map: 'main.map.json', output:'./public/build/main.map.json'});
 
     var watcher = watchify(bundler);    
     externals.forEach(function(x){
         watcher.external(x.expose);
-    }); 
+    });    
 
     return watcher
         .on('update', function () { 
             var updateStart = Date.now();
             console.log('Updating!');
             watcher.bundle() 
-            .pipe(source('main.js'))        
+            .pipe(source('main.js'))                    
             .pipe(gulp.dest('./public/build/'));
             console.log('Updated!', (Date.now() - updateStart) + 'ms');
         })
@@ -42,7 +44,7 @@ gulp.task('app', function() {
 
 gulp.task('libs', function () {
     var bundler = browserify({          
-        debug: false        
+        debug: false
     });
 
     externals.forEach(function(x){
