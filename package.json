@@ -1,0 +1,34 @@
+{
+  "name": "baby-guess",
+  "version": "0.0.0",
+  "description": "a mess about in react.",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.4.3",
+    "bootstrap": "^3.3.4",
+    "browserify": "^10.2.3",
+    "express": "^4.4.5",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "jquery": "^2.1.4",
+    "react": "^0.13.3",
+    "react-intl": "^1.2.0",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "react",
+    "example"
+  ],
+  "author": "Andy Boyne",
+  "engines": {
+    "node": "0.12.x"
+  }
+}

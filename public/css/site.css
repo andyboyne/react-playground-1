@@ -1,0 +1,16 @@
+input[type="radio"]{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align: text-bottom;
+	margin-left:8px;
+}
+
+i {
+	margin:4px;
+	cursor:pointer;
+}
+
+.thank-you-container{
+	text-align: center;
+}
