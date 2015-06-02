@@ -1,3 +1,5 @@
+"use strict";
+
 var React = window.React = require('react');
 var BabyGuessBox = require('./BabyGuessBox');
 

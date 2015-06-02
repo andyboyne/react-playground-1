@@ -1,3 +1,5 @@
+"use strict";
+
 var $ = require('jquery');
 var React = require('react');
 
@@ -14,8 +16,12 @@ module.exports = React.createClass({
       dataType: 'json',
       cache: false,
       success: function(data) {
+        data.forEach(function(x){
+          x.submitted = new Date(x.submitted);
+        });
+
         data.sort(function(x,y){
-          return x.submitted > y.submitted;
+          return x.submitted < y.submitted;
         });
 
         this.setState({data: data});
@@ -27,7 +33,7 @@ module.exports = React.createClass({
   },
   submitGuess:function(guess){    
     var guesses = this.state.data;
-    guesses.push(guess);
+    guesses.unshift(guess);
     this.setState({
       data: guesses,
       submitted : true

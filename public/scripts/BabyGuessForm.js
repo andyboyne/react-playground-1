@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react');
 module.exports = React.createClass({
   getInitialState:function(){
@@ -38,7 +40,11 @@ module.exports = React.createClass({
      });
   },
 
-  render: function(){    
+  render: function(){   
+    var defaultValue = "2015-11-28";
+    var minValue = "2015-11-01";
+    var maxValue = "2015-12-31";
+
     return (
       <div className={'' + (this.state.submitted ? 'hidden' : 'visible')}>
         <h2 className="app-section-header">What&apos;s Your Guess?</h2>
@@ -53,7 +59,7 @@ module.exports = React.createClass({
           <div className="form-group">
             <label className="col-sm-2 control-label">Baby&apos;s Birthday</label>
             <div className="col-sm-4">
-              <input className="form-control" type="date" ref="dob"/>
+              <input className="form-control" type="date" ref="dob" defaultValue={defaultValue} min={minValue} max={maxValue}/>
             </div>
           </div>
 
@@ -68,7 +74,7 @@ module.exports = React.createClass({
           <div className="form-group">
             <label className="col-sm-2 control-label">Baby&apos;s Weight?</label>
             <div className="col-sm-4">
-              <input className="form-control" type="number" ref="weight"/>
+              <input className="form-control" type="number" ref="weight" min="2" step="0.1"/>
             </div>
           </div>
 

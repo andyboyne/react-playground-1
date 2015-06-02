@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react');
 var ReactIntl = require('react-intl');
 var IntlMixin     = ReactIntl.IntlMixin;

@@ -11,16 +11,18 @@
     "express": "^4.4.5",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.5.2",
+    "gulp-jest": "^0.4.0",
+    "jest-cli": "^0.4.5",
     "jquery": "^2.1.4",
     "react": "^0.13.3",
     "react-intl": "^1.2.0",
     "react-tools": "^0.13.3",
-    "reactify": "^1.1.1",    
+    "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./node_modules/jest-cli/bin/jest.js",
     "start": "node server.js"
   },
   "keywords": [
@@ -30,5 +32,9 @@
   "author": "Andy Boyne",
   "engines": {
     "node": "0.12.x"
+  },
+  "jest": {
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
   }
 }
